@@ -113,28 +113,28 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button id="MatDesign" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#openWebsiteParser" prefHeight="50.0" prefWidth="304.0" stylesheets="@../../CSS/ViewCSS.css" text="Website Parser" GridPane.columnIndex="1">
+                  <Button id="MatDesign" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#openVisitor" prefHeight="50.0" prefWidth="304.0" stylesheets="@../../CSS/ViewCSS.css" text="Visitor" GridPane.columnIndex="1">
                      <padding>
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </padding>
                      <GridPane.margin>
                         <Insets bottom="6.0" left="11.0" right="11.0" top="6.0" />
                      </GridPane.margin></Button>
-                  <Button id="MatDesign" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openAutomation" stylesheets="@../../CSS/ViewCSS.css" text="Automation" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Button id="MatDesign" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openDecorator" stylesheets="@../../CSS/ViewCSS.css" text="Decorator" GridPane.columnIndex="1" GridPane.rowIndex="1">
                       <padding>
                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                       </padding>
                       <GridPane.margin>
                           <Insets bottom="6.0" left="11.0" right="11.0" top="6.0" />
                       </GridPane.margin></Button>
-                  <Button id="MatDesign" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../../CSS/ViewCSS.css" onAction="#openVisitor"  text="Visitor" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                  <Button id="MatDesign" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../../CSS/ViewCSS.css" onAction="#openIterator"  text="..." GridPane.columnIndex="1" GridPane.rowIndex="5">
                       <padding>
                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                       </padding>
                       <GridPane.margin>
                           <Insets bottom="6.0" left="11.0" right="11.0" top="6.0" />
                       </GridPane.margin></Button>
-                  <Button id="MatDesign" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openAdapter" stylesheets="@../../CSS/ViewCSS.css" text="Adapter" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <Button id="MatDesign" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openAdapter" stylesheets="@../../CSS/ViewCSS.css" text="..." GridPane.columnIndex="1" GridPane.rowIndex="4">
                       <padding>
                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                       </padding>
@@ -148,14 +148,14 @@
                       <GridPane.margin>
                           <Insets bottom="6.0" left="11.0" right="11.0" top="6.0" />
                       </GridPane.margin></Button>
-                  <Button id="MatDesign" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openParser" stylesheets="@../../CSS/ViewCSS.css" text="TODO Universal Parser" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <Button id="MatDesign" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openAdapter" stylesheets="@../../CSS/ViewCSS.css" text="Adapter" GridPane.columnIndex="1" GridPane.rowIndex="2">
                       <padding>
                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                       </padding>
                       <GridPane.margin>
                           <Insets bottom="6.0" left="11.0" right="11.0" top="6.0" />
                       </GridPane.margin></Button>
-                  <Button id="MatDesign" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../../CSS/ViewCSS.css" text="Decorator"  onAction="#openDecorator" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                  <Button id="MatDesign" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../../CSS/ViewCSS.css" text=".."  onAction="#openDecorator" GridPane.columnIndex="1" GridPane.rowIndex="6">
                       <padding>
                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                       </padding>
