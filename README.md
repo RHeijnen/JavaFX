@@ -1,1 +1,3 @@
 # JavaFX
+
+For IDEA
