@@ -1,6 +1,5 @@
 package Views;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
@@ -8,37 +7,34 @@ public class ApplicationMenuView extends SuperView {
     public Label scene_DescriptionLabel;
 
     @FXML
-    public void openWebsiteParser() {
+    public void openFactoryPaternMenu() {
         FXController.Controller logout = new FXController.Controller();
-        logout.setMainWindow("Home", "/FXML/Website/WebsiteParserWindow.fxml");
+        logout.setMainWindow("Home", "/FXML/DesignPaterns/Factory/FactoryMenuWindow.fxml");
     }
     @FXML
-    public void openAutomation() {
+    public void openVisitorPaternMenu() {
         FXController.Controller logout = new FXController.Controller();
-        logout.setMainWindow("Home", "/FXML/Automation/AutomationWindow.fxml");
+        logout.setMainWindow("Home", "/FXML/DesignPaterns/Visitor/VisitorMenuWindow.fxml");
     }
     @FXML
-    public void openParser() {
+    public void openItteratorPaternMenu() {
         FXController.Controller logout = new FXController.Controller();
-        logout.setMainWindow("Home", "/FXML/Parser/ParserWindow.fxml");
+        logout.setMainWindow("Home", "/FXML/DesignPaterns/Itterator/ItteratorMenuWindow.fxml");
+    }
+    @FXML
+    public void openAdapterPaternMenu() {
+        FXController.Controller logout = new FXController.Controller();
+        logout.setMainWindow("Home", "/FXML/DesignPaterns/Adapter/AdapterMenuWindow.fxml");
+    }
+    @FXML
+    public void openNullObjectPaternMenu() {
+        FXController.Controller logout = new FXController.Controller();
+        logout.setMainWindow("Home", "/FXML/DesignPaterns/Nill/NillObjectMenuWindow.fxml");
+    }
+    @FXML
+    public void openDecoratorPaternMenu() {
+        FXController.Controller logout = new FXController.Controller();
+        logout.setMainWindow("Home", "/FXML/DesignPaterns/Decorator/DecoratorMenuWindow.fxml");
     }
 
-    public void openIterator(ActionEvent actionEvent) {
-        FXController.Controller logout = new FXController.Controller();
-        logout.setMainWindow("Home", "/FXML/Iterator/IteratorWindow.fxml");
-    }
-    public void openAdapter(ActionEvent actionEvent) {
-        FXController.Controller logout = new FXController.Controller();
-        logout.setMainWindow("Home", "/FXML/Adapter/adapterWindow.fxml");
-    }
-
-    public void openDecorator(ActionEvent actionEvent) {
-        FXController.Controller logout = new FXController.Controller();
-        logout.setMainWindow("Home", "/FXML/Decorator/DecoratorWindow.fxml");
-    }
-
-    public void openVisitor(ActionEvent actionEvent) {
-        FXController.Controller logout = new FXController.Controller();
-        logout.setMainWindow("Home", "/FXML/Visitor/VisitorWindow.fxml");
-    }
 }

@@ -15,13 +15,13 @@ public class SuperView {
     @FXML
     public void HomeFunction() {
         FXController.Controller logout = new FXController.Controller();
-        logout.setMainWindow("Home", "/FXML/App/ApplicationMenuWindow.fxml");
+        logout.setMainWindow("Home", "../FXML/App/ApplicationMenuWindow.fxml");
     }
 
     @FXML
     public void AboutFunction() {
         FXController.Controller logout = new FXController.Controller();
-        logout.setMainWindow("Home", "/FXML/App/AboutViewWindow.fxml");
+        logout.setMainWindow("Home", "../FXML/App/AboutViewWindow.fxml");
     }
 
 }
