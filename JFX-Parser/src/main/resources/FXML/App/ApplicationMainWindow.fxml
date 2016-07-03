@@ -152,13 +152,18 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints />
             <RowConstraints />
          </rowConstraints>
          <children>
             <Button mnemonicParsing="false" onAction="#doSetSeperator" prefHeight="25.0" prefWidth="98.0" text="Set Seperator" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+            <Label prefHeight="17.0" prefWidth="155.0" text="Single seperator file" textFill="WHITE" GridPane.columnIndex="1" GridPane.columnSpan="4" />
             <TextField fx:id="Scene_seperator" prefHeight="25.0" prefWidth="60.0" promptText=", OR : OR ..." GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#readFile" prefHeight="0.0" prefWidth="125.0" text="Read File" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="8">
+            <Button mnemonicParsing="false" onAction="#readSingleSeperatorFile" prefHeight="0.0" prefWidth="125.0" text="Read File" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets bottom="10.0" top="10.0" />
                </GridPane.margin>
@@ -166,9 +171,12 @@
                   <Insets top="10.0" />
                </opaqueInsets>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="XML Seperator" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="4" />
-            <Line endX="149.0" startX="-100.0" stroke="#e3f2fd" GridPane.columnSpan="5" GridPane.rowIndex="1" GridPane.rowSpan="4" />
-            <Line endX="149.0" startX="-100.0" stroke="#e3f2fd" GridPane.rowIndex="6" />
+            <Label prefHeight="17.0" prefWidth="139.0" text="Read file with XML layout" textFill="WHITE" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#readXmlFile" prefHeight="25.0" prefWidth="112.0" text="Read XML" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="6" />
+            <Button mnemonicParsing="false" onAction="#readJsonFile" prefHeight="25.0" prefWidth="188.0" text="Read Json" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="9" />
+            <Label prefHeight="17.0" prefWidth="161.0" text="Read file with Json layout" textFill="WHITE" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="8" />
+            <Line endX="149.0" startX="-100.0" stroke="#e3f2fd" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="4" />
+            <Line endX="149.0" startX="-100.0" stroke="#e3f2fd" GridPane.rowIndex="7" />
          </children>
          <GridPane.margin>
             <Insets left="10.0" right="10.0" />

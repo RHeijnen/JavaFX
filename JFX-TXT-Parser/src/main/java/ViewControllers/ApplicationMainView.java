@@ -16,17 +16,15 @@ public class ApplicationMainView extends SuperView {
     @FXML
     public TextField Scene_seperator;
     @FXML
-    public RadioButton Scene_Other_Label;
-    @FXML
-    public RadioButton Scene_XML_Label;
-    @FXML
     public TextField scene_setSeperatorOutput;
-    @FXML
-    public TextField scene_OtherTextField;
-    @FXML
-    private RadioButton Scene_TXT_Label;
-    @FXML
-    private RadioButton Scene_CSV_Label;
+    public RadioButton scene_radioCSV;
+    public RadioButton scene_radioXML;
+    public RadioButton scene_radioJson;
+    public ToggleGroup outputType;
+    public RadioButton scene_radioSingleSeperator;
+    public Button scene_readFileButton;
+    public Button scene_setOutputSeperator;
+    public Button scene_saveFileButton;
     @FXML
     private TextArea Scene_TextArea;
     private String string_FileType;
@@ -60,9 +58,10 @@ public class ApplicationMainView extends SuperView {
         Scene_TextArea.appendText(par_Text);
     }
 
-    public void doSetSeperator(ActionEvent actionEvent) {
+    public void setInputSeperator(ActionEvent actionEvent) {
         separator = Scene_seperator.getText();
         setTextAreaContent(separator);
+        scene_readFileButton.setDisable(false);
     }
 
     public void readSingleSeperatorFile(ActionEvent actionEvent) {
@@ -115,19 +114,18 @@ public class ApplicationMainView extends SuperView {
     }
 
     public void saveFile(ActionEvent actionEvent) {
-        if (Scene_TXT_Label.isSelected()) {
+        if (scene_radioSingleSeperator.isSelected()) {
             if(string_OutputSeperator != null){
                 saveWriter(new Parsers.TXTParser(string_OutputSeperator));
             }else{
                 setTextAreaContent("No Seperator selected");
             }
 
-        } else if (Scene_CSV_Label.isSelected()) {
+        } else if (scene_radioCSV.isSelected()) {
             saveWriter(new Parsers.CSVParser(","));
-        }else if (Scene_Other_Label.isSelected()) {
-            FXController.Controller logout = new FXController.Controller();
-            logout.setMainWindow("Constructor", "/FXML/App/FileTypeConstructorWindow.fxml");
-        }else if (Scene_XML_Label.isSelected()) {
+        }else if (scene_radioXML.isSelected()) {
+            setTextAreaContent("Not implemented yet");
+        }else if (scene_radioJson.isSelected()) {
             setTextAreaContent("Not implemented yet");
         }else{
             setTextAreaContent("Please Select output file");
@@ -157,5 +155,25 @@ public class ApplicationMainView extends SuperView {
     public void readXmlFile(ActionEvent actionEvent) {
         setTextAreaContent(" Not implemented yet ");
 
+    }
+
+    public void RadioSingleSeperatorAction(ActionEvent actionEvent) {
+        scene_setOutputSeperator.setDisable(false);
+        scene_saveFileButton.setDisable(false);
+
+    }
+    public void RadioXMLAction(ActionEvent actionEvent) {
+        scene_setOutputSeperator.setDisable(true);
+        scene_saveFileButton.setDisable(false);
+
+    }
+    public void RadioJSON (ActionEvent actionEvent) {
+        scene_setOutputSeperator.setDisable(true);
+        scene_saveFileButton.setDisable(false);
+
+    }
+    public void RadioCSV (ActionEvent actionEvent) {
+        scene_setOutputSeperator.setDisable(true);
+        scene_saveFileButton.setDisable(false);
     }
 }
