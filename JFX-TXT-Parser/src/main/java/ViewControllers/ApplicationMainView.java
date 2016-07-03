@@ -97,7 +97,7 @@ public class ApplicationMainView extends SuperView {
         return var_OutputFile;
     }
 
-    private void saveWriter(Parsers.BaseParser writer){
+    private void writeSimpleSeperatedOutputFile(Parsers.BaseParser writer){
         writer.openFile(showSaveDialog());
         for(int i = 0; i< int_RowSize;i++){
             for (int j = 0; j < int_CollumSize;j++){
@@ -116,17 +116,17 @@ public class ApplicationMainView extends SuperView {
     public void saveFile(ActionEvent actionEvent) {
         if (scene_radioSingleSeperator.isSelected()) {
             if(string_OutputSeperator != null){
-                saveWriter(new Parsers.TXTParser(string_OutputSeperator));
+                writeSimpleSeperatedOutputFile(new Parsers.TXTParser(string_OutputSeperator));
             }else{
                 setTextAreaContent("No Seperator selected");
             }
 
         } else if (scene_radioCSV.isSelected()) {
-            saveWriter(new Parsers.CSVParser(","));
+            writeSimpleSeperatedOutputFile(new Parsers.CSVParser(","));
         }else if (scene_radioXML.isSelected()) {
             setTextAreaContent("Not implemented yet");
         }else if (scene_radioJson.isSelected()) {
-            setTextAreaContent("Not implemented yet");
+            writeJsonFile(new Parsers.JsonParser());
         }else{
             setTextAreaContent("Please Select output file");
         }
@@ -146,13 +146,28 @@ public class ApplicationMainView extends SuperView {
         return (String) collumnListArray[collumn].get(row);
     }
 
+    // TODO make valid json format friendly
+    public void writeJsonFile(Parsers.JsonParser writer) {
+        writer.openFile(showSaveDialog());
+        for (int i = 0; i < int_CollumSize; i++) {
+            writer.writeCollumnContent(getStringFromList(i,0));
+            for (int j = 1; j < int_RowSize; j++) {
+                if(j != int_RowSize-1){
+                    writer.writeRowContent(getStringFromList(i,j));
+                    writer.writeSeperator();
+                    writer.writeNewLine();
+                }else{
+                    writer.writeRowContent(getStringFromList(i,j));
+                    writer.writeNewLine();
 
-    public void readJsonFile(ActionEvent actionEvent) {
-        setTextAreaContent(" Not implemented yet ");
-
+                }
+            }
+            writer.writeCollumnEnd();
+        }
+        writer.closeWriter();
     }
 
-    public void readXmlFile(ActionEvent actionEvent) {
+    public void writeXmlFile() {
         setTextAreaContent(" Not implemented yet ");
 
     }

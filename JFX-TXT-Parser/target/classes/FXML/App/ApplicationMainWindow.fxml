@@ -208,12 +208,12 @@
                   <Insets left="15.0" right="15.0" />
                </GridPane.margin>
             </TextField>
-            <RadioButton fx:id="scene_radioJson" mnemonicParsing="false" prefHeight="17.0" prefWidth="106.0" text="Json" toggleGroup="$outputType" GridPane.rowIndex="3">
+            <RadioButton fx:id="scene_radioJson" mnemonicParsing="false" onAction="#RadioJSON" prefHeight="17.0" prefWidth="106.0" text="Json" toggleGroup="$outputType" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="15.0" right="15.0" />
                </GridPane.margin>
             </RadioButton>
-            <RadioButton fx:id="scene_radioXML" mnemonicParsing="false" text="XML" toggleGroup="$outputType" GridPane.rowIndex="4">
+            <RadioButton fx:id="scene_radioXML" mnemonicParsing="false" onAction="#RadioXMLAction" text="XML" toggleGroup="$outputType" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="15.0" right="15.0" top="15.0" />
                </GridPane.margin>
@@ -228,7 +228,7 @@
                   <Insets bottom="5.0" />
                </GridPane.margin>
             </Line>
-            <RadioButton fx:id="scene_radioCSV" mnemonicParsing="false" prefHeight="17.0" prefWidth="106.0" text="CSV" toggleGroup="$outputType" GridPane.rowIndex="2">
+            <RadioButton fx:id="scene_radioCSV" mnemonicParsing="false" onAction="#RadioCSV" prefHeight="17.0" prefWidth="106.0" text="CSV" toggleGroup="$outputType" GridPane.rowIndex="2">
                <opaqueInsets>
                   <Insets left="15.0" />
                </opaqueInsets>
