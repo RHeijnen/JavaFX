@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Created by Indi on 6/19/2016.
+ * Created by Indi on 3/19/2016.
  */
 public interface BaseParser {
     public void openFile(File par_outputFile);
